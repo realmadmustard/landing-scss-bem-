@@ -1,0 +1,367 @@
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("../fonts/Montserrat-Bold.ttf") format("ttf"), url("../fonts/Montserrat-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Poppins Light";
+  src: url("../fonts/Poppins-Light.ttf") format("ttf"), url("../fonts/Poppins-Light.woff2") format("woff2");
+}
+.wrapper__block-5__nav__burger:before, .wrapper__block-5__nav__burger:after, .wrapper__block-5__nav__burger, .wrapper__block-4__nav__burger:before, .wrapper__block-4__nav__burger:after, .wrapper__block-4__nav__burger, .wrapper__block-3__nav__burger:before, .wrapper__block-3__nav__burger:after, .wrapper__block-3__nav__burger, .wrapper__block-2__nav__burger:before, .wrapper__block-2__nav__burger:after, .wrapper__block-2__nav__burger, .wrapper__block-1__nav__burger:before, .wrapper__block-1__nav__burger:after, .wrapper__block-1__nav__burger {
+  border-bottom: 2px solid white;
+  border-radius: 5px;
+  width: 20px;
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.wrapper__block-5__nav__burger:before, .wrapper__block-5__nav__burger:after, .wrapper__block-4__nav__burger:before, .wrapper__block-4__nav__burger:after, .wrapper__block-3__nav__burger:before, .wrapper__block-3__nav__burger:after, .wrapper__block-2__nav__burger:before, .wrapper__block-2__nav__burger:after, .wrapper__block-1__nav__burger:before, .wrapper__block-1__nav__burger:after {
+  content: "";
+  right: 0;
+}
+
+.wrapper__block-5__dots, .wrapper__block-4__dots, .wrapper__block-3__dots, .wrapper__block-2__dots, .wrapper__block-1__dots {
+  position: absolute;
+  top: 40%;
+  right: 20px;
+}
+
+.wrapper__block-5__dots__item, .wrapper__block-4__dots__item, .wrapper__block-3__dots__item, .wrapper__block-2__dots__item, .wrapper__block-1__dots__item {
+  border: 4px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-bottom: 10px;
+  opacity: 0.5;
+}
+
+.wrapper__block-2__content__button, .wrapper__block-1__intro__button {
+  font-family: "Poppins Light", sans-serif;
+  border: 3px solid white;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  padding: 10px 40px;
+  margin-top: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.wrapper__block-2__content__button:hover, .wrapper__block-1__intro__button:hover {
+  transition: all 0.5s;
+  background-color: white;
+  color: black;
+}
+
+.wrapper__block-5__content__credits__links__social, .wrapper__block-5__content__credits__links__contacts, .wrapper__block-5__content__credits__links__office {
+  width: 45%;
+  float: left;
+  padding-right: 20px;
+  height: 135px;
+}
+
+.wrapper__block-5__content__credits__links__social__social-icons__dribble, .wrapper__block-5__content__credits__links__social__social-icons__lin, .wrapper__block-5__content__credits__links__social__social-icons__insta, .wrapper__block-5__content__credits__links__social__social-icons__twitter {
+  width: 20px;
+  height: 20px;
+  padding-right: 5px;
+}
+
+.wrapper__block-5__content__form__message, .wrapper__block-5__content__form__subject, .wrapper__block-5__content__form__email, .wrapper__block-5__content__form__send {
+  font-family: "Poppins Light", sans-serif;
+  outline: none;
+  width: 30%;
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  color: white;
+  padding: 12px 0;
+  margin: 0 10px 100px 0;
+}
+
+.wrapper__block-5__content__form__message::placeholder, .wrapper__block-5__content__form__subject::placeholder, .wrapper__block-5__content__form__email::placeholder, .wrapper__block-5__content__form__send::placeholder {
+  color: white;
+  text-indent: 5px;
+  font-size: 10px;
+}
+
+.active {
+  opacity: 0.85;
+}
+
+.clearfix {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+}
+.wrapper__block-1 {
+  width: 100%;
+  background: url(../img/bg-1.png) no-repeat;
+  background-size: cover;
+  min-height: 620px;
+  position: relative;
+}
+.wrapper__block-1__nav {
+  width: 100%;
+  position: relative;
+}
+.wrapper__block-1__nav__img {
+  padding: 20px 0 0 40px;
+}
+.wrapper__block-1__nav__burger:after {
+  top: 5px;
+}
+.wrapper__block-1__nav__burger:before {
+  top: 10px;
+}
+.wrapper__block-1__intro {
+  text-align: center;
+  color: white;
+  width: 600px;
+  margin: auto;
+  max-width: 100%;
+  padding: 150px 0;
+}
+.wrapper__block-1__intro__main-heading {
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 60px;
+}
+.wrapper__block-1__intro__secondary-heading {
+  font-family: "Poppins Light", sans-serif;
+  font-size: 18px;
+}
+.wrapper__block-2 {
+  width: 100%;
+  background: #f1f1f1;
+  position: relative;
+  padding-bottom: 100px;
+}
+.wrapper__block-2__nav {
+  width: 100%;
+  position: relative;
+}
+.wrapper__block-2__nav__img {
+  padding: 20px 0 0 40px;
+}
+.wrapper__block-2__nav__burger {
+  border-color: black;
+}
+.wrapper__block-2__nav__burger:after {
+  top: 5px;
+  border-color: black;
+}
+.wrapper__block-2__nav__burger:before {
+  top: 10px;
+  border-color: black;
+}
+.wrapper__block-2__device {
+  margin-top: 75px;
+  width: 50%;
+  max-width: 780px;
+  float: left;
+}
+.wrapper__block-2__content {
+  width: 50%;
+  float: left;
+  max-width: 1200px;
+  margin: auto;
+}
+.wrapper__block-2__content__main-heading {
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 50px;
+  padding: 0 200px 0 0;
+}
+.wrapper__block-2__content__text {
+  font-family: "Poppins Light", sans-serif;
+  padding: 0 140px 0 0;
+}
+.wrapper__block-2__content__button {
+  color: black;
+  border-color: black;
+}
+.wrapper__block-2__content__button:hover {
+  background-color: black;
+  color: white;
+}
+.wrapper__block-2__dots__item {
+  border-color: #545454;
+}
+.wrapper__block-3 {
+  width: 100%;
+  background: url(../img/bg-3.png) no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 50px;
+}
+.wrapper__block-3__nav {
+  width: 100%;
+  position: relative;
+}
+.wrapper__block-3__nav__img {
+  padding: 20px 0 0 40px;
+}
+.wrapper__block-3__nav__burger:after {
+  top: 5px;
+}
+.wrapper__block-3__nav__burger:before {
+  top: 10px;
+}
+.wrapper__block-3__content {
+  color: white;
+  padding-top: 150px;
+  max-width: 1200px;
+  margin: auto;
+}
+.wrapper__block-3__content__text {
+  width: 50%;
+  float: left;
+  margin-top: 75px;
+}
+.wrapper__block-3__content__text__main-heading {
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 40px;
+  padding: 0 200px 0 100px;
+}
+.wrapper__block-3__content__text__secondary-heading {
+  font-family: "Poppins Light", sans-serif;
+  padding: 0 40px 0 100px;
+}
+.wrapper__block-3__content__text__icons {
+  padding-left: 100px;
+  margin-top: 20px;
+}
+.wrapper__block-3__content__device {
+  width: 50%;
+  float: left;
+}
+.wrapper__block-3__content__device__img {
+  display: block;
+  margin: auto;
+}
+.wrapper__block-4 {
+  width: 100%;
+  background: #323c6d;
+  position: relative;
+}
+.wrapper__block-4__nav {
+  width: 100%;
+  position: relative;
+}
+.wrapper__block-4__nav__img {
+  padding: 20px 0 0 40px;
+}
+.wrapper__block-4__nav__burger:after {
+  top: 5px;
+}
+.wrapper__block-4__nav__burger:before {
+  top: 10px;
+}
+.wrapper__block-4__content {
+  max-width: 1200px;
+  margin: auto;
+}
+.wrapper__block-4__content__text {
+  padding: 50px 95px;
+  color: white;
+}
+.wrapper__block-4__content__text__heading {
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 35px;
+  width: 45%;
+  float: left;
+}
+.wrapper__block-4__content__text__paragraph {
+  font-family: "Poppins Light", sans-serif;
+  font-size: 16px;
+  width: 25%;
+  float: left;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+.wrapper__block-4__content__icons {
+  text-align: center;
+  padding-bottom: 100px;
+}
+.wrapper__block-4__content__icons__item {
+  width: 100px;
+  padding: 0 10px;
+}
+.wrapper__block-5 {
+  width: 100%;
+  background: url(../img/bg-5.png) no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 200px;
+}
+.wrapper__block-5__nav {
+  width: 100%;
+  position: relative;
+}
+.wrapper__block-5__nav__img {
+  padding: 20px 0 0 40px;
+}
+.wrapper__block-5__nav__burger:after {
+  top: 5px;
+}
+.wrapper__block-5__nav__burger:before {
+  top: 10px;
+}
+.wrapper__block-5__content {
+  padding-top: 100px;
+  max-width: 1200px;
+  margin: auto;
+}
+.wrapper__block-5__content__credits {
+  padding: 50px 25px 0 90px;
+  color: white;
+  width: 45%;
+  float: left;
+}
+.wrapper__block-5__content__credits__heading {
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 40px;
+}
+.wrapper__block-5__content__credits__text {
+  padding: 0 150px 0 0;
+  font-family: "Poppins Light", sans-serif;
+  font-size: 16px;
+}
+.wrapper__block-5__content__credits__links {
+  font-family: "Poppins Light", sans-serif;
+  font-size: 14px;
+  padding-right: 60px;
+}
+.wrapper__block-5__content__form {
+  width: 40%;
+  float: left;
+  padding-top: 100px;
+}
+.wrapper__block-5__content__form__message {
+  width: 95%;
+  margin-bottom: 20px;
+}
+.wrapper__block-5__content__form__button {
+  font-family: "Poppins Light", sans-serif;
+  display: block;
+  margin: auto;
+  border: 1px solid white;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px 30px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.wrapper__block-5__content__form__button:hover {
+  transition: all 0.5s;
+  background-color: transparent;
+  color: white;
+}
+
+/*# sourceMappingURL=app.css.map */

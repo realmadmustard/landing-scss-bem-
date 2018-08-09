@@ -1,0 +1,490 @@
+// fonts
+@font-face {
+	font-family: "Montserrat Bold";
+	src: url('../fonts/Montserrat-Bold.ttf') format('ttf'), url('../fonts/Montserrat-Bold.woff2') format('woff2');
+}
+@font-face {
+	font-family: "Poppins Light";
+	src: url('../fonts/Poppins-Light.ttf') format('ttf'), url('../fonts/Poppins-Light.woff2') format('woff2');
+}
+
+$font-mont: "Montserrat Bold", sans-serif;
+$font-pop: "Poppins Light", sans-serif;
+// 
+// mixins
+// 
+// extensions
+%burger-zone {
+	border-bottom: 2px solid white;
+	border-radius: 5px;
+	width: 20px;
+	position: absolute;
+	right: 40px;
+	top: 20px;
+	cursor: pointer;
+}
+%burger-zone-pseudo {
+	content: '';
+	right: 0;
+}
+%dots {
+	position: absolute;
+	top: 40%;
+	right: 20px;
+}
+%dots-item {
+	border: 4px solid white;
+	border-radius: 50%;
+	cursor: pointer;
+	margin-bottom: 10px;
+	opacity: .5;
+}
+%button {
+	font-family: $font-pop;
+	border: 3px solid white;
+	background-color: rgba(255,255,255,0);
+	color: white;
+	padding: 10px 40px;
+	margin-top: 20px;
+	transition: all .5s;
+	cursor: pointer;
+}
+%button-hover {
+	transition: all .5s;
+	background-color: rgba(255,255,255,1);
+	color: black;
+}
+%links {
+	width: 45%;
+	float: left;
+	padding-right: 20px;
+	height: 135px;
+}
+%social-icons {
+	width: 20px;
+	height: 20px;
+	padding-right: 5px;
+}
+%form-triple-input {
+	font-family: $font-pop;
+	outline: none;
+	width: 30%;
+	border: none;
+	border-bottom: 2px solid white;
+	background-color: transparent;
+	color:white;
+	padding: 12px 0;
+    margin: 0 10px 100px 0;
+}
+%form-input-placeholder {
+	color: white;
+	text-indent: 5px;
+	font-size: 10px;
+}
+.active {
+	opacity: .85;
+}
+.clearfix {
+	display: table;
+	content: '';
+	clear: both;
+}
+// 
+// scss
+body {
+	padding: 0;
+	margin: 0;
+}
+.wrapper {
+	width: 100%;
+	&__block-1 {
+		width: 100%;
+		background: url(../img/bg-1.png) no-repeat;
+		background-size: cover;
+		min-height: 620px;
+		position: relative;
+		&__nav {
+			width: 100%;
+			position: relative;
+			&__img {
+				padding: 20px 0 0 40px;
+			}
+			&__burger {				
+				@extend %burger-zone;
+				&:after {
+					@extend %burger-zone;
+					@extend %burger-zone-pseudo;
+					top: 5px;
+				}
+				&:before {
+					@extend %burger-zone;
+					@extend %burger-zone-pseudo;				
+					top: 10px;
+				}
+			}
+		}
+		&__intro {
+			text-align: center;
+			color: white;
+			width: 600px;
+			margin: auto;
+			max-width: 100%;
+			padding: 150px 0;
+			&__main-heading {
+				font-family: $font-mont;
+				font-size: 60px;
+			}
+			&__secondary-heading {
+				font-family: $font-pop;
+				font-size: 18px;
+			}
+			&__button {
+				@extend %button;
+				&:hover {
+					@extend %button-hover;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+		&__dots {
+			@extend %dots;
+			&__item {
+				@extend %dots-item;
+			}
+		}
+	}
+	&__block-2 {
+		width: 100%;
+		background: #f1f1f1;
+		position: relative;
+		padding-bottom: 100px;
+		&__nav {
+			width: 100%;
+			position: relative;
+			&__img {
+				padding: 20px 0 0 40px;
+			}
+			&__burger {				
+				@extend %burger-zone;
+				border-color: black;
+				&:after {
+					@extend %burger-zone;
+					@extend %burger-zone-pseudo;
+					top: 5px;
+					border-color: black;
+				}
+				&:before {
+					@extend %burger-zone;
+					@extend %burger-zone-pseudo;
+					top: 10px;
+					border-color: black;
+				}
+			}
+		}
+		&__device {
+			margin-top: 75px;
+			width: 50%;
+			max-width: 780px;
+			float: left;
+		}
+		&__content {
+			width: 50%;
+			float: left;
+			max-width: 1200px;
+			margin: auto;
+			&__main-heading {
+				font-family: $font-mont;
+				font-size: 50px;
+    			padding: 0 200px 0 0;
+			}
+			&__text {
+				font-family: $font-pop;
+				padding: 0 140px 0 0;
+			}
+			&__button {
+				@extend %button;
+				color: black;
+				border-color: black;
+				&:hover {
+					@extend %button-hover;
+					background-color: rgba(0,0,0,1);
+					color: white;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+		&__dots {
+			@extend %dots;
+			&__item {
+				@extend %dots-item;
+				border-color: #545454;
+			}
+		}
+	}
+	&__block-3 {
+		width: 100%;
+		background: url(../img/bg-3.png) no-repeat;
+		background-size: cover;
+		position: relative;
+		padding-bottom: 50px;
+		&__nav {
+			width: 100%;
+			position: relative;
+			&__img {
+				padding: 20px 0 0 40px;
+			}
+			&__burger {				
+				@extend %burger-zone;
+				&:after {
+					@extend %burger-zone;
+					@extend %burger-zone-pseudo;
+					top: 5px;
+					
+				}
+				&:before {
+					@extend %burger-zone;
+					@extend %burger-zone-pseudo;				
+					top: 10px;
+				}
+			}
+		}
+		&__content {
+			color: white;
+			padding-top: 150px;
+			max-width: 1200px;
+			margin: auto;
+			&__text {
+				width: 50%;
+				float: left;
+				margin-top: 75px;
+				&__main-heading {
+					font-family: $font-mont;
+					font-size: 40px;
+					padding: 0 200px 0 100px;
+				}
+				&__secondary-heading {
+					font-family: $font-pop;
+					padding: 0 40px 0 100px;
+				}
+				&__icons {
+					padding-left: 100px;
+					margin-top: 20px;
+				}
+			}
+			&__device {
+				width: 50%;
+				float: left;
+				&__img {
+					display: block;
+					margin: auto;
+				}
+			}
+		}
+		&__dots {
+			@extend %dots;
+			&__item {
+				@extend %dots-item;
+			}
+		}
+	}
+	&__block-4 {
+		width: 100%;
+		background: #323c6d;
+		position: relative;
+		&__nav {
+			width: 100%;
+			position: relative;
+			&__img {
+				padding: 20px 0 0 40px;
+			}
+			&__burger {				
+				@extend %burger-zone;
+				&:after {
+					@extend %burger-zone;
+					@extend %burger-zone-pseudo;
+					top: 5px;
+					
+				}
+				&:before {
+					@extend %burger-zone;
+					@extend %burger-zone-pseudo;				
+					top: 10px;
+				}
+			}
+		}
+		&__content {
+			max-width: 1200px;
+			margin: auto;
+			&__text {
+				padding: 50px 95px;
+				color: white;
+				&__heading {
+					font-family: $font-mont;
+					font-size: 35px;
+					width: 45%;
+					float: left;
+				}
+				&__paragraph {
+					font-family: $font-pop;
+					font-size: 16px;
+					width: 25%;
+					float: left;
+					padding-top: 20px;
+					padding-right: 20px;
+				}
+			}
+			&__icons {
+				text-align: center;
+				padding-bottom: 100px; 
+				&__item {
+					width: 100px;
+					padding: 0 10px;
+				}
+			}
+		}
+		&__dots {
+			@extend %dots;
+			&__item {
+				@extend %dots-item;
+			}
+		}
+	}
+	&__block-5 {
+		width: 100%;
+		background: url(../img/bg-5.png) no-repeat;
+		background-size: cover;
+		position: relative;
+		padding-bottom: 200px;
+		&__nav {
+			width: 100%;
+			position: relative;
+			&__img {
+				padding: 20px 0 0 40px;
+			}
+			&__burger {				
+				@extend %burger-zone;
+				&:after {
+					@extend %burger-zone;
+					@extend %burger-zone-pseudo;
+					top: 5px;
+					
+				}
+				&:before {
+					@extend %burger-zone;
+					@extend %burger-zone-pseudo;				
+					top: 10px;
+				}
+			}
+		}
+		&__content {
+			padding-top: 100px;
+			max-width: 1200px;
+			margin: auto;
+			&__credits {
+				padding: 50px 25px 0 90px;
+				color: white;
+				width: 45%;
+				float: left;
+				&__heading {
+					font-family: $font-mont;
+					font-size: 40px;
+				}
+				&__text {
+					padding: 0 150px 0 0;
+					font-family: $font-pop;
+					font-size: 16px;
+				}
+				&__links {
+					font-family: $font-pop;
+					font-size: 14px;
+					padding-right: 60px;
+					&__office {
+						@extend %links;
+					}
+					&__contacts {
+						@extend %links;
+					}
+					&__social {
+						@extend %links;
+						&__social-icons {
+							&__twitter {
+								@extend %social-icons;
+							}
+							&__insta {
+								@extend %social-icons;	
+							}
+							&__lin {
+								@extend %social-icons;
+							}
+							&__dribble {
+								@extend %social-icons;
+							}
+						}
+					}
+				}
+			}
+			&__form {
+				width: 40%;
+				float: left;
+				padding-top: 100px;
+				&__send {
+					@extend %form-triple-input;
+					&::placeholder {
+						@extend %form-input-placeholder;
+					}
+				}
+				&__email {
+					@extend %form-triple-input;
+					&::placeholder {
+						@extend %form-input-placeholder;
+					}
+				}
+				&__subject {
+					@extend %form-triple-input;
+					&::placeholder {
+						@extend %form-input-placeholder;
+					}
+				}
+				&__message {
+					@extend %form-triple-input;
+					&::placeholder {
+						@extend %form-input-placeholder;
+					}
+					width: 95%;
+					margin-bottom: 20px;
+				}
+				&__button {
+					font-family: $font-pop;
+					display: block;
+					margin: auto;
+					border: 1px solid white;
+					background-color: #fff;
+					border-radius: 20px;
+					padding: 10px 30px;
+					transition: all .5s;
+					cursor: pointer;
+					&:hover {
+						transition: all .5s;
+						background-color: transparent;
+						color: white;
+					}
+					&:focus {
+					outline: none;
+				}
+				}
+			}
+		}
+		&__dots {
+			@extend %dots;
+			&__item {
+				@extend %dots-item;
+			}
+		}
+	}
+}
+@import 'media';
+// 
